@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-resume - Hobbies</title>
+  <style>
+    body {
+      background-color: #56DFCF;
+      font-family: sitka small semibold, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .banner {
+      background-image: url("image/snow.gif"); /* ✅ correct line */
+      background-size: cover;
+      background-position: center;
+      color: #3674B5;
+      text-align: center;
+      padding: 60px 20px;
+      font-family: jokerman, sans-serif;
+    }
+
+    .banner h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover,
+    ul.navbar li a.active {
+      background-color: #ffc239;
+      color: black;
+      font-weight: bold;
+    }
+
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hobby-list {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .hobby-list li {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    form textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    form input[type="submit"],
+    form input[type="reset"] {
+      background-color: #333;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 15px;
+      margin-right: 10px;
+    }
+
+    form input[type="submit"]:hover,
+    form input[type="reset"]:hover {
+      background-color: #ffc239;
+      color: black;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    .footer a {
+      color: lightblue;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: none;
+    }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <h1>Welcome to My Page</h1>
+  </div>
+
+  <ul class="navbar">
+  <li><a href="index.html">Home</a></li>
+
+  <li><a href="personal.html">Personal Details</a></li>
+
+  <li><a href="family.html">Family</a></li>
+
+  <li><a href="friends.html">Friends</a></li>
+
+  <li><a href="education.html">Education</a></li>
+
+  <li><a href="dream.html">Dream</a></li>
+
+  <li><a class="active" href="hobbies.html">Hobbies</a></li>
+
+  <li><a href="favourite.html">Favourite</a></li>
+
+  <li><a href="gallery.html">Gallery</a></li>
+
+  <li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+  <div class="content">
+    <h2 class="fade-in-up" style="font-size: 200%; font-family: wide latin, sans-serif; color: #FF7601;">Hobbies</h2>
+
+    <h1>My Hobbies</h1>
+    <ul class="hobby-list">
+      <li>Watching drama</li>
+      <li>Listening to music</li>
+      <li>Making music</li>
+      <li>Reading</li>
+    </ul>
+
+    <h2>Share Your Hobby</h2>
+    <p>I'd love to know what you enjoy doing in your free time.</p>
+
+    <form action="https://formsubmit.co/muhamadzulhilmizamri69@gmail.com" method="post" enctype="text/plain">
+      <label>Your Name:</label>
+      <input type="text" name="name" placeholder="Enter your name">
+
+      <label>Your Favorite Hobby:</label>
+      <input type="text" name="favorite_hobby" placeholder="What's your hobby?">
+
+      <label>Do we have the same hobbies?</label>
+      <div style="margin-top: 10px;">
+        <input type="checkbox" name="match" value="Watching drama"> Watching drama<br>
+        <input type="checkbox" name="match" value="Listening to music"> Listening to music<br>
+        <input type="checkbox" name="match" value="Making music"> Making music<br>
+        <input type="checkbox" name="match" value="Reading"> Reading<br>
+      </div>
+
+      <label>Why do you like it?</label>
+      <textarea name="comment" placeholder="Share your thoughts..."></textarea>
+
+      <div style="margin-top: 20px;">
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+      </div>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025, Muhamad Zulhilmi. All rights reserved.<br>
+    <a href="contact.html">Contact Us</a></p>
+  </div>
+
+</body>
+</html>
