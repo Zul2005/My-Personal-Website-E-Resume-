@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-resume</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body bgcolor="56DFCF">
+<b>
+
+<!-- This is your content -->
+
+<div class="banner">
+  <h1>Welcome to My Page</h1>
+</div>
+
+
+<ul>
+  <li><a href="index.html">Home</a></li>
+
+  <li><a href="personal.html">Personal Details</a></li>
+
+  <li><a href="family.html">Family</a></li>
+
+  <li><a href="friends.html">Friends</a></li>
+
+  <li><a href="education.html">Education</a></li>
+
+  <li><a href="dream.html">Dream</a></li>
+
+  <li><a href="hobbies.html">Hobbies</a></li>
+
+  <li><a href="favourite.html">Favourite</a></li>
+
+  <li><a class="active" href="gallery.html">Gallery</a></li>
+
+  <li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<center><b><h2 class="slide-in-left" style="font-size: 200%; font-family: broadway; color: red;">Gallery</h2></b></center>
+
+<h2 class="zoom-in" style="text-align: center; font-size: 150%; font-family: broadway; color: black;">My Photo Gallery</h2>
+<div class="image-gallery">
+  <img src="image/family.jpg" alt="Image 1" onclick="openLightbox(this)">
+  <img src="image/school4.jpg" alt="Image 2"onclick="openLightbox(this)">
+  <img src="image/f3.jpg" alt="Image 3"onclick="openLightbox(this)">
+  <img src="image/class.jpg" alt="Image 4"onclick="openLightbox(this)">
+  <img src="image/f1.jpg" alt="Image 5"onclick="openLightbox(this)">
+  <img src="image/koko1.jpg" alt="Image 6"onclick="openLightbox(this)">
+  <img src="image/me4.jpg" alt="Image 7" onclick="openLightbox(this)">
+  <img src="image/love.jpg" alt="Image 8"onclick="openLightbox(this)">
+  <img src="image/school3.jpg" alt="Image 9"onclick="openLightbox(this)">
+  <img src="image/class2.jpg" alt="Image 10"onclick="openLightbox(this)">
+  <img src="image/library.jpg" alt="Image 11"onclick="openLightbox(this)">
+  <img src="image/uni.jpg" alt="Image 12"onclick="openLightbox(this)">
+  <img src="image/parent.jpg" alt="Image 13"onclick="openLightbox(this)">
+  <img src="image/school2.jpg" alt="Image 14"onclick="openLightbox(this)">
+  <img src="image/school.jpg" alt="Image 15"onclick="openLightbox(this)">
+  <img src="image/class3.jpg" alt="Image 16"onclick="openLightbox(this)">
+
+
+  <!-- Add more as needed -->
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+
+<div class="footer">
+    &copy; 2025 Muhamad Zulhilmi. All rights reserved.
+    <br>
+    <a href="contact.html">Contact Us</a>
+</div>
+
+<script>
+function openLightbox(image) {
+  document.getElementById("lightbox-img").src = image.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
