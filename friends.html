@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>E-resume</title>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    .friends-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .friend-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    .friend-card img {
+      width: 100%;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .friend-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 8px 0;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .friend-card:hover .caption {
+      opacity: 1;
+    }
+
+    .quote-box {
+      background-color: white;
+      margin: 30px auto;
+      max-width: 800px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-family: Georgia, serif;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    .footer a {
+      color: lightblue;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body bgcolor="#56DFCF">
+
+<!-- Banner -->
+<div class="banner">
+  <h1>Welcome to My Page</h1>
+</div>
+
+<!-- Navigation Bar -->
+<ul>
+  <li><a href="index.html">Home</a></li>
+
+  <li><a href="personal.html">Personal Details</a></li>
+
+  <li><a href="family.html">Family</a></li>
+
+  <li><a class="active" href="friends.html">Friends</a></li>
+
+  <li><a href="education.html">Education</a></li>
+
+  <li><a href="dream.html">Dream</a></li>
+
+  <li><a href="hobbies.html">Hobbies</a></li>
+
+  <li><a href="favourite.html">Favourite</a></li>
+
+  <li><a href="gallery.html">Gallery</a></li>
+
+  <li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+<!-- Heading -->
+<center>
+  <h2 class="zoom-in" style="font-size: 200%; font-family: 'Bodoni MT Black'; color: white;">Friends</h2>
+</center>
+
+<!-- Quote -->
+<div class="quote-box">
+  <h3 class="slide-in-left" style="font-family: 'Berlin Sans FB'; color: black;">My friends are like family to me. We have shared countless memories, and I cherish every moment spent with them. 
+  From laughter to tears, our bond has grown stronger through every challenge and celebration.</h3>
+</div>
+
+<!-- Image Gallery with Captions -->
+<div class="friends-gallery">
+  <div class="friend-card" onclick="openLightbox(this)">
+    <img src="image/group.jpg" alt="Friend 1">
+    <div class="caption">Best Buddy Since Highschool</div>
+  </div>
+  <div class="friend-card" onclick="openLightbox(this)">
+    <img src="image/khairul.jpg" alt="Friend 2">
+    <div class="caption">Partner in Crime</div>
+  </div>
+  <div class="friend-card" onclick="openLightbox(this)">
+    <img src="image/thaqif.jpg" alt="Friend 3">
+    <div class="caption">Always There to Cheer Me Up</div>
+  </div>
+  <div class="friend-card" onclick="openLightbox(this)">
+    <img src="image/khairi1.jpg" alt="Friend 4">
+    <div class="caption">The Wise One</div>
+  </div>
+  <div class="friend-card" onclick="openLightbox(this)">
+    <img src="image/haikal.jpg" alt="Friend 5">
+    <div class="caption">The Jokester of the Group</div>
+  </div>
+  <div class="friend-card" onclick="openLightbox(this)">
+    <img src="image/nazril.jpg" alt="Friend 6">
+    <div class="caption">Quiet but Supportive</div>
+  </div>
+  <div class="friend-card" onclick="openLightbox(this)">
+    <img src="image/dan.jpg" alt="Friend 7">
+    <div class="caption">The Selfie Master and Memory Keeper</div>
+  </div>
+  <div class="friend-card" onclick="openLightbox(this)">
+    <img src="image/aiman1.jpg" alt="Friend 8">
+    <div class="caption">The Loudest Laugh in the Room</div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+  background:rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:9999;" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px;" />
+</div>
+
+<!-- Lightbox JavaScript -->
+<script>
+function openLightbox(imageCard) {
+  const img = imageCard.querySelector("img");
+  document.getElementById("lightbox-img").src = img.src;
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+</script>
+
+<!-- Footer -->
+<div class="footer">
+    &copy; 2025 Muhamad Zulhilmi. All rights reserved.
+    <br>
+    <a href="contact.html">Contact Us</a>
+</div>
+
+</body>
+</html>
